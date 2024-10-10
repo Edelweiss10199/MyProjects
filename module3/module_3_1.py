@@ -13,6 +13,8 @@ def string_info(string1: str):
 
 def is_contains(string2: str, list_to_search: list):
     count_calls()
+    string2 = string2.lower()
+    list_to_search = [x.lower() for x in list_to_search]
     if string2 in list_to_search:
         return True
     else:
@@ -21,5 +23,5 @@ def is_contains(string2: str, list_to_search: list):
 print(string_info('Capybara'))  # (8, 'CAPYBARA', 'capybara')
 print(string_info('Armageddon'))  # (10, 'ARMAGEDDON', 'armageddon')
 print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))  # True ## Urban ~ urBAN
-print(is_contains('cycle', ['recycling', 'cyclic']))  # False # No matches
-
+print(is_contains('cycle', ['recycling', 'cyclic']))# False # No matches
+print(calls)
